@@ -16,6 +16,9 @@
 		1192731F2A0A7151006F9A1E /* DeezerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192731E2A0A7151006F9A1E /* DeezerAppTests.swift */; };
 		119273292A0A7151006F9A1E /* DeezerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273282A0A7151006F9A1E /* DeezerAppUITests.swift */; };
 		1192732B2A0A7151006F9A1E /* DeezerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192732A2A0A7151006F9A1E /* DeezerAppUITestsLaunchTests.swift */; };
+		1192733F2A0A7E1D006F9A1E /* KategoriModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192733E2A0A7E1D006F9A1E /* KategoriModel.swift */; };
+		119273432A0AD8CE006F9A1E /* KategoriManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273422A0AD8CE006F9A1E /* KategoriManager.swift */; };
+		119273472A0ADA6D006F9A1E /* KategoriHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273462A0ADA6D006F9A1E /* KategoriHucre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		119273242A0A7151006F9A1E /* DeezerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		119273282A0A7151006F9A1E /* DeezerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerAppUITests.swift; sourceTree = "<group>"; };
 		1192732A2A0A7151006F9A1E /* DeezerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1192733E2A0A7E1D006F9A1E /* KategoriModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriModel.swift; sourceTree = "<group>"; };
+		119273422A0AD8CE006F9A1E /* KategoriManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriManager.swift; sourceTree = "<group>"; };
+		119273462A0ADA6D006F9A1E /* KategoriHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriHucre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,9 @@
 			children = (
 				119273072A0A7150006F9A1E /* AppDelegate.swift */,
 				119273092A0A7150006F9A1E /* SceneDelegate.swift */,
-				1192730B2A0A7150006F9A1E /* ViewController.swift */,
-				1192730D2A0A7150006F9A1E /* Main.storyboard */,
+				119273392A0A7775006F9A1E /* Model */,
+				119273372A0A7731006F9A1E /* Controller */,
+				119273382A0A775C006F9A1E /* View */,
 				119273102A0A7151006F9A1E /* Assets.xcassets */,
 				119273122A0A7151006F9A1E /* LaunchScreen.storyboard */,
 				119273152A0A7151006F9A1E /* Info.plist */,
@@ -125,6 +132,32 @@
 				1192732A2A0A7151006F9A1E /* DeezerAppUITestsLaunchTests.swift */,
 			);
 			path = DeezerAppUITests;
+			sourceTree = "<group>";
+		};
+		119273372A0A7731006F9A1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1192730B2A0A7150006F9A1E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		119273382A0A775C006F9A1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1192730D2A0A7150006F9A1E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		119273392A0A7775006F9A1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1192733E2A0A7E1D006F9A1E /* KategoriModel.swift */,
+				119273422A0AD8CE006F9A1E /* KategoriManager.swift */,
+				119273462A0ADA6D006F9A1E /* KategoriHucre.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1192730C2A0A7150006F9A1E /* ViewController.swift in Sources */,
+				119273472A0ADA6D006F9A1E /* KategoriHucre.swift in Sources */,
 				119273082A0A7150006F9A1E /* AppDelegate.swift in Sources */,
+				119273432A0AD8CE006F9A1E /* KategoriManager.swift in Sources */,
 				1192730A2A0A7150006F9A1E /* SceneDelegate.swift in Sources */,
+				1192733F2A0A7E1D006F9A1E /* KategoriModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
