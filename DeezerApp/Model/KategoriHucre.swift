@@ -9,4 +9,7 @@ import UIKit
 
 class KategoriHucre: UICollectionViewCell {
     
+    @IBOutlet weak var kategoriImageView: UIImageView!
+    @IBOutlet weak var kategoriLabel: UILabel!
+    
 }

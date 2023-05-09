@@ -33,8 +33,33 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="foq-Zc-Rtf">
                                             <rect key="frame" x="0.0" y="0.0" width="188" height="210"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQ4-4c-A3d">
+                                                    <rect key="frame" x="22" y="29" width="144" height="95"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="95" id="QJk-0T-ZOu"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgW-Cx-aNt">
+                                                    <rect key="frame" x="73" y="149" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SQ4-4c-A3d" firstAttribute="leading" secondItem="foq-Zc-Rtf" secondAttribute="leading" constant="22" id="2HN-rn-j94"/>
+                                                <constraint firstItem="PgW-Cx-aNt" firstAttribute="top" secondItem="SQ4-4c-A3d" secondAttribute="bottom" constant="25" id="aAq-Et-hGk"/>
+                                                <constraint firstAttribute="bottom" secondItem="PgW-Cx-aNt" secondAttribute="bottom" constant="40" id="kDK-qu-AMx"/>
+                                                <constraint firstItem="PgW-Cx-aNt" firstAttribute="centerX" secondItem="foq-Zc-Rtf" secondAttribute="centerX" id="sDA-gk-EoD"/>
+                                                <constraint firstItem="SQ4-4c-A3d" firstAttribute="centerX" secondItem="foq-Zc-Rtf" secondAttribute="centerX" id="yu1-fZ-j9r"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="188" height="210"/>
+                                        <connections>
+                                            <outlet property="kategoriImageView" destination="SQ4-4c-A3d" id="Wj9-Iq-1oD"/>
+                                            <outlet property="kategoriLabel" destination="PgW-Cx-aNt" id="ZQE-Sg-xfa"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

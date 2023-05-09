@@ -27,6 +27,21 @@ class ViewController: UIViewController {
           
           kategoriCollectionView.delegate = self
           kategoriCollectionView.dataSource = self
+          
+          let tasarim:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+          
+          let genislik = self.kategoriCollectionView.frame.size.width
+          
+          tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+          
+          tasarim.minimumInteritemSpacing = 10
+          tasarim.minimumLineSpacing = 10
+          
+          let hucreGenislik = (genislik-30) / 2
+          
+          tasarim.itemSize = CGSize(width: (hucreGenislik), height: hucreGenislik*1.65)
+          
+          kategoriCollectionView!.collectionViewLayout = tasarim
         
         
         
@@ -68,7 +83,51 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource{
         guard let kategori = myKategoriler?[indexPath.row] else { return UICollectionViewCell() }
             
             //cell.textLabel?.text = "\(movie.title) - \(movie.releaseYear)"
-        print(kategori.name)
+        
+        cell.kategoriLabel.text = kategori.name
+        //cell.kategoriImageView.image = UIImage(named: kategori.picture)
+        
+        //-----------------
+        let kategoriPictureURL = URL(string: kategori.picture_big)!
+
+        let session = URLSession(configuration: .default)
+
+        
+        let downloadPicTask = session.dataTask(with: kategoriPictureURL) { (data, response, error) in
+            
+            if let e = error {
+                print("Error downloading cat picture: \(e)")
+            } else {
+                
+                if let res = response as? HTTPURLResponse {
+                    
+                    if let imageData = data {
+                        // Finally convert that Data into an image and do what you wish with it.
+                        _ = UIImage(data: imageData)
+                        
+                        DispatchQueue.main.sync {
+                            cell.kategoriImageView.image = UIImage(data: imageData)
+                        }
+                        
+                        
+                        
+                    } else {
+                        print("Couldn't get image: Image is nil")
+                    }
+                } else {
+                    print("Couldn't get response code for some reason")
+                }
+            }
+        }
+
+        downloadPicTask.resume()
+        
+        //-----------------
+        
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 0.5
+        
+        
         
         
         
