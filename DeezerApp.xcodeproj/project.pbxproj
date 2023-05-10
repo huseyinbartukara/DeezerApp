@@ -19,6 +19,7 @@
 		1192733F2A0A7E1D006F9A1E /* KategoriModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192733E2A0A7E1D006F9A1E /* KategoriModel.swift */; };
 		119273432A0AD8CE006F9A1E /* KategoriManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273422A0AD8CE006F9A1E /* KategoriManager.swift */; };
 		119273472A0ADA6D006F9A1E /* KategoriHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273462A0ADA6D006F9A1E /* KategoriHucre.swift */; };
+		119273492A0B9CD7006F9A1E /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273482A0B9CD7006F9A1E /* ArtistViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1192733E2A0A7E1D006F9A1E /* KategoriModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriModel.swift; sourceTree = "<group>"; };
 		119273422A0AD8CE006F9A1E /* KategoriManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriManager.swift; sourceTree = "<group>"; };
 		119273462A0ADA6D006F9A1E /* KategoriHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriHucre.swift; sourceTree = "<group>"; };
+		119273482A0B9CD7006F9A1E /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1192730B2A0A7150006F9A1E /* ViewController.swift */,
+				119273482A0B9CD7006F9A1E /* ArtistViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				1192730C2A0A7150006F9A1E /* ViewController.swift in Sources */,
 				119273472A0ADA6D006F9A1E /* KategoriHucre.swift in Sources */,
 				119273082A0A7150006F9A1E /* AppDelegate.swift in Sources */,
+				119273492A0B9CD7006F9A1E /* ArtistViewController.swift in Sources */,
 				119273432A0AD8CE006F9A1E /* KategoriManager.swift in Sources */,
 				1192730A2A0A7150006F9A1E /* SceneDelegate.swift in Sources */,
 				1192733F2A0A7E1D006F9A1E /* KategoriModel.swift in Sources */,

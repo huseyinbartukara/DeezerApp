@@ -21,41 +21,41 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sdf-Rp-fV4">
-                                    <size key="itemSize" width="188" height="210"/>
+                                    <size key="itemSize" width="201" height="322"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kategoriHucre" id="c7J-n1-4Vn" customClass="KategoriHucre" customModule="DeezerApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="210"/>
+                                        <rect key="frame" x="96" y="0.0" width="201" height="322"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="foq-Zc-Rtf">
-                                            <rect key="frame" x="0.0" y="0.0" width="188" height="210"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="201" height="322"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQ4-4c-A3d">
-                                                    <rect key="frame" x="22" y="29" width="144" height="95"/>
+                                                    <rect key="frame" x="8" y="62" width="185" height="189"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="95" id="QJk-0T-ZOu"/>
+                                                        <constraint firstAttribute="width" constant="185" id="YTr-Sk-O0W"/>
+                                                        <constraint firstAttribute="height" constant="189" id="vVc-cd-Ahl"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgW-Cx-aNt">
-                                                    <rect key="frame" x="73" y="149" width="42" height="21"/>
+                                                    <rect key="frame" x="79.666666666666671" y="276" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="SQ4-4c-A3d" firstAttribute="leading" secondItem="foq-Zc-Rtf" secondAttribute="leading" constant="22" id="2HN-rn-j94"/>
-                                                <constraint firstItem="PgW-Cx-aNt" firstAttribute="top" secondItem="SQ4-4c-A3d" secondAttribute="bottom" constant="25" id="aAq-Et-hGk"/>
-                                                <constraint firstAttribute="bottom" secondItem="PgW-Cx-aNt" secondAttribute="bottom" constant="40" id="kDK-qu-AMx"/>
-                                                <constraint firstItem="PgW-Cx-aNt" firstAttribute="centerX" secondItem="foq-Zc-Rtf" secondAttribute="centerX" id="sDA-gk-EoD"/>
-                                                <constraint firstItem="SQ4-4c-A3d" firstAttribute="centerX" secondItem="foq-Zc-Rtf" secondAttribute="centerX" id="yu1-fZ-j9r"/>
+                                                <constraint firstItem="SQ4-4c-A3d" firstAttribute="centerX" secondItem="foq-Zc-Rtf" secondAttribute="centerX" id="7Od-51-o96"/>
+                                                <constraint firstAttribute="bottom" secondItem="PgW-Cx-aNt" secondAttribute="bottom" constant="25" id="Ju9-uv-hf8"/>
+                                                <constraint firstItem="PgW-Cx-aNt" firstAttribute="top" secondItem="SQ4-4c-A3d" secondAttribute="bottom" constant="25" id="nEH-hY-kmN"/>
+                                                <constraint firstItem="PgW-Cx-aNt" firstAttribute="centerX" secondItem="foq-Zc-Rtf" secondAttribute="centerX" id="w0I-n6-i8N"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="188" height="210"/>
+                                        <size key="customSize" width="201" height="322"/>
                                         <connections>
                                             <outlet property="kategoriImageView" destination="SQ4-4c-A3d" id="Wj9-Iq-1oD"/>
                                             <outlet property="kategoriLabel" destination="PgW-Cx-aNt" id="ZQE-Sg-xfa"/>
@@ -76,6 +76,7 @@
                     <navigationItem key="navigationItem" title="Kategori Sayfası" id="VkW-JN-ZmM"/>
                     <connections>
                         <outlet property="kategoriCollectionView" destination="R67-Zy-PJg" id="v9R-hO-fNw"/>
+                        <segue destination="Tth-Sh-NQH" kind="show" identifier="toArtistVc" id="m0s-Xu-gvJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -147,6 +148,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrV-6Q-35p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="977.86259541984725" y="-179.57746478873241"/>
+        </scene>
+        <!--Artist View Controller-->
+        <scene sceneID="q8M-GG-53J">
+            <objects>
+                <viewController id="Tth-Sh-NQH" customClass="ArtistViewController" customModule="DeezerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aaU-oV-7Zo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BI4-Mt-ezN">
+                                <rect key="frame" x="155" y="405" width="83" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="brR-2Y-F0n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BI4-Mt-ezN" firstAttribute="centerY" secondItem="aaU-oV-7Zo" secondAttribute="centerY" id="QcJ-dS-08g"/>
+                            <constraint firstItem="BI4-Mt-ezN" firstAttribute="centerX" secondItem="aaU-oV-7Zo" secondAttribute="centerX" id="X8u-Hm-Na0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lc9-4x-0Ki"/>
+                    <connections>
+                        <outlet property="idLabel" destination="BI4-Mt-ezN" id="lU7-qV-mFr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khs-E2-gBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2714" y="-180"/>
         </scene>
     </scenes>
     <resources>

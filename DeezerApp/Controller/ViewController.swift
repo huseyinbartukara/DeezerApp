@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var kategoriLabel: UILabel!
     @IBOutlet weak var kategoriCollectionView: UICollectionView!
     
+    var genderId : Int = 0
+    
     var myKategoriler: [Data]? {
         didSet {
           DispatchQueue.main.async { [self] in
@@ -49,14 +51,20 @@ class ViewController: UIViewController {
         
           kategoriManager.fetchKategori { (kategori) in
           DispatchQueue.main.async { [self] in
-              navigationItem.title = "kategori"
+              navigationItem.title = "Kategoriler"
           }
           
               self.myKategoriler = kategori.data
         }
       }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let indeks = sender as? Int
+        let gidilecekVC = segue.destination as! ArtistViewController
+        gidilecekVC.genderId = indeks ?? 0
+        
+    }
     
 
     
@@ -82,10 +90,10 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource{
         
         guard let kategori = myKategoriler?[indexPath.row] else { return UICollectionViewCell() }
             
-            //cell.textLabel?.text = "\(movie.title) - \(movie.releaseYear)"
+            
         
         cell.kategoriLabel.text = kategori.name
-        //cell.kategoriImageView.image = UIImage(named: kategori.picture)
+        //print(kategori.id)
         
         //-----------------
         let kategoriPictureURL = URL(string: kategori.picture_big)!
@@ -126,6 +134,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource{
         
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 20
         
         
         
@@ -138,6 +147,15 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         print("tıklanınca yapılacak işlemler")
+        
+        if let kategori = myKategoriler?[indexPath.row]{
+            print(kategori.id)
+            genderId = kategori.id
+            self.performSegue(withIdentifier: "toArtistVc", sender: kategori.id)
+        }
+        
+        
+        
     }
     
     
