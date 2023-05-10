@@ -12,7 +12,9 @@ class ArtistViewController: UIViewController {
     
     @IBOutlet weak var artistCollectionView: UICollectionView!
     
-    var genderId  =  0
+   var genderId  =  0
+   var kategori = ""
+   var artistDetayManager = ArtistDetayManager()
     
     
     var myArtistler: [Artist]? {
@@ -49,14 +51,22 @@ class ArtistViewController: UIViewController {
         
         artistManager.fetchArtist { (artist) in
             DispatchQueue.main.async { [self] in
-               navigationItem.title = ""
+               navigationItem.title = kategori
             }
             
-            self.myArtistler = artist.data
+           self.myArtistler = artist.data
         }
         
         
     }
+   
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+      let artistId = sender as? Int
+      let gidilecekVC = segue.destination as! ArtistDetayViewController
+      artistDetayManager.getArtistID(artistId: artistId ?? 0)
+      gidilecekVC.artistId = artistId ?? 0
+   }
     
 }
 
@@ -135,11 +145,10 @@ extension ArtistViewController:UICollectionViewDelegate, UICollectionViewDataSou
         
         print("tıklanınca yapılacak işlemler")
         
-        /*if let kategori = myKategoriler?[indexPath.row]{
-            print(kategori.id)
-            genderId = kategori.id
-            self.performSegue(withIdentifier: "toArtistVc", sender: kategori.id)
-        }*/
+        if let artist = myArtistler?[indexPath.row]{
+           print(artist.id)
+           self.performSegue(withIdentifier: "toArtistDetayVc", sender: artist.id)
+        }
         
         
         

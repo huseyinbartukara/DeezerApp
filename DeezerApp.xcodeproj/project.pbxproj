@@ -23,6 +23,10 @@
 		1192734B2A0BAA4C006F9A1E /* ArtistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192734A2A0BAA4C006F9A1E /* ArtistManager.swift */; };
 		1192734D2A0BABF7006F9A1E /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192734C2A0BABF7006F9A1E /* ArtistModel.swift */; };
 		119273512A0BB0FE006F9A1E /* ArtistHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273502A0BB0FE006F9A1E /* ArtistHucre.swift */; };
+		119273532A0BC2F8006F9A1E /* Kategori.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273522A0BC2F8006F9A1E /* Kategori.swift */; };
+		119273552A0BEF8E006F9A1E /* ArtistDetayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273542A0BEF8E006F9A1E /* ArtistDetayViewController.swift */; };
+		119273572A0BF728006F9A1E /* ArtistModelDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273562A0BF728006F9A1E /* ArtistModelDetay.swift */; };
+		119273592A0BF859006F9A1E /* ArtistDetayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273582A0BF859006F9A1E /* ArtistDetayManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		1192734A2A0BAA4C006F9A1E /* ArtistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistManager.swift; sourceTree = "<group>"; };
 		1192734C2A0BABF7006F9A1E /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
 		119273502A0BB0FE006F9A1E /* ArtistHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHucre.swift; sourceTree = "<group>"; };
+		119273522A0BC2F8006F9A1E /* Kategori.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kategori.swift; sourceTree = "<group>"; };
+		119273542A0BEF8E006F9A1E /* ArtistDetayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetayViewController.swift; sourceTree = "<group>"; };
+		119273562A0BF728006F9A1E /* ArtistModelDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModelDetay.swift; sourceTree = "<group>"; };
+		119273582A0BF859006F9A1E /* ArtistDetayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetayManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,7 @@
 			children = (
 				1192730B2A0A7150006F9A1E /* ViewController.swift */,
 				119273482A0B9CD7006F9A1E /* ArtistViewController.swift */,
+				119273542A0BEF8E006F9A1E /* ArtistDetayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +177,9 @@
 				1192734A2A0BAA4C006F9A1E /* ArtistManager.swift */,
 				1192734C2A0BABF7006F9A1E /* ArtistModel.swift */,
 				119273502A0BB0FE006F9A1E /* ArtistHucre.swift */,
+				119273522A0BC2F8006F9A1E /* Kategori.swift */,
+				119273562A0BF728006F9A1E /* ArtistModelDetay.swift */,
+				119273582A0BF859006F9A1E /* ArtistDetayManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				119273592A0BF859006F9A1E /* ArtistDetayManager.swift in Sources */,
 				1192734B2A0BAA4C006F9A1E /* ArtistManager.swift in Sources */,
 				1192730C2A0A7150006F9A1E /* ViewController.swift in Sources */,
 				119273472A0ADA6D006F9A1E /* KategoriHucre.swift in Sources */,
@@ -310,8 +323,11 @@
 				119273512A0BB0FE006F9A1E /* ArtistHucre.swift in Sources */,
 				1192734D2A0BABF7006F9A1E /* ArtistModel.swift in Sources */,
 				119273492A0B9CD7006F9A1E /* ArtistViewController.swift in Sources */,
+				119273552A0BEF8E006F9A1E /* ArtistDetayViewController.swift in Sources */,
 				119273432A0AD8CE006F9A1E /* KategoriManager.swift in Sources */,
 				1192730A2A0A7150006F9A1E /* SceneDelegate.swift in Sources */,
+				119273572A0BF728006F9A1E /* ArtistModelDetay.swift in Sources */,
+				119273532A0BC2F8006F9A1E /* Kategori.swift in Sources */,
 				1192733F2A0A7E1D006F9A1E /* KategoriModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

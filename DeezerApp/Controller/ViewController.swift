@@ -61,11 +61,11 @@ class ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let indeks = sender as? Int
+        let kategori = sender as? Data
         let gidilecekVC = segue.destination as! ArtistViewController
-        gidilecekVC.genderId = indeks ?? 0
-        
-        artistManager.getGenderID(genderId: indeks ?? 0)
+        gidilecekVC.genderId = kategori?.id ?? 0
+        gidilecekVC.kategori = kategori?.name ?? ""
+        artistManager.getGenderID(genderId: kategori?.id ?? 0)
         
     }
     
@@ -152,9 +152,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource{
         print("tıklanınca yapılacak işlemler")
         
         if let kategori = myKategoriler?[indexPath.row]{
-            print(kategori.id)
-            genderId = kategori.id
-            self.performSegue(withIdentifier: "toArtistVc", sender: kategori.id)
+            self.performSegue(withIdentifier: "toArtistVc", sender: kategori)
         }
         
         

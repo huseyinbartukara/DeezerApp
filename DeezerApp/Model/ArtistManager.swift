@@ -13,7 +13,7 @@ struct ArtistManager {
     
     let genelUrl = "https://api.deezer.com/genre"
     let olmasıGerekenUrl = "https://api.deezer.com/genre/12/artists"
-    var gelenGenderId = 0
+    
     
     mutating func getGenderID(genderId : Int) {
         gelenGenderId = genderId

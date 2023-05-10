@@ -216,11 +216,45 @@
                     <navigationItem key="navigationItem" id="Lc9-4x-0Ki"/>
                     <connections>
                         <outlet property="artistCollectionView" destination="fls-td-nCC" id="fDd-eV-aKU"/>
+                        <segue destination="Zco-wu-t75" kind="show" identifier="toArtistDetayVc" id="KrZ-sG-Xa1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khs-E2-gBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2714" y="-180"/>
+        </scene>
+        <!--Artist Detay View Controller-->
+        <scene sceneID="86I-4D-kMY">
+            <objects>
+                <viewController id="Zco-wu-t75" customClass="ArtistDetayViewController" customModule="DeezerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kIi-JN-vHt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="byd-kO-bDC">
+                                <rect key="frame" x="0.0" y="103" width="393" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="NqP-fy-7cU"/>
+                                    <constraint firstAttribute="width" constant="393" id="PbL-7p-RNC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M49-bf-ZvL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="byd-kO-bDC" firstAttribute="leading" secondItem="M49-bf-ZvL" secondAttribute="leading" id="EwH-LL-elV"/>
+                            <constraint firstItem="byd-kO-bDC" firstAttribute="top" secondItem="M49-bf-ZvL" secondAttribute="top" id="JX9-yF-eiB"/>
+                            <constraint firstItem="byd-kO-bDC" firstAttribute="trailing" secondItem="M49-bf-ZvL" secondAttribute="trailing" id="N4K-ld-CPt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9S4-Uz-43A"/>
+                    <connections>
+                        <outlet property="artistKapakImageView" destination="byd-kO-bDC" id="pbY-4D-Zm1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="few-ZW-wLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3556.4885496183206" y="-180.28169014084509"/>
         </scene>
     </scenes>
     <resources>
