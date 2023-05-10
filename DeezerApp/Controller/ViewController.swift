@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var kategoriCollectionView: UICollectionView!
     
     var genderId : Int = 0
+    var artistManager  = ArtistManager()
     
     var myKategoriler: [Data]? {
         didSet {
@@ -63,6 +64,8 @@ class ViewController: UIViewController {
         let indeks = sender as? Int
         let gidilecekVC = segue.destination as! ArtistViewController
         gidilecekVC.genderId = indeks ?? 0
+        
+        artistManager.getGenderID(genderId: indeks ?? 0)
         
     }
     
