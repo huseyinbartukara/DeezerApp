@@ -27,6 +27,8 @@
 		119273552A0BEF8E006F9A1E /* ArtistDetayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273542A0BEF8E006F9A1E /* ArtistDetayViewController.swift */; };
 		119273572A0BF728006F9A1E /* ArtistModelDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273562A0BF728006F9A1E /* ArtistModelDetay.swift */; };
 		119273592A0BF859006F9A1E /* ArtistDetayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119273582A0BF859006F9A1E /* ArtistDetayManager.swift */; };
+		1192735B2A0C0643006F9A1E /* AlbumHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192735A2A0C0643006F9A1E /* AlbumHucre.swift */; };
+		1192735D2A0C0D30006F9A1E /* ArtistModelAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192735C2A0C0D30006F9A1E /* ArtistModelAlbum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		119273542A0BEF8E006F9A1E /* ArtistDetayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetayViewController.swift; sourceTree = "<group>"; };
 		119273562A0BF728006F9A1E /* ArtistModelDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModelDetay.swift; sourceTree = "<group>"; };
 		119273582A0BF859006F9A1E /* ArtistDetayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetayManager.swift; sourceTree = "<group>"; };
+		1192735A2A0C0643006F9A1E /* AlbumHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumHucre.swift; sourceTree = "<group>"; };
+		1192735C2A0C0D30006F9A1E /* ArtistModelAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModelAlbum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,8 @@
 				119273522A0BC2F8006F9A1E /* Kategori.swift */,
 				119273562A0BF728006F9A1E /* ArtistModelDetay.swift */,
 				119273582A0BF859006F9A1E /* ArtistDetayManager.swift */,
+				1192735A2A0C0643006F9A1E /* AlbumHucre.swift */,
+				1192735C2A0C0D30006F9A1E /* ArtistModelAlbum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 			files = (
 				119273592A0BF859006F9A1E /* ArtistDetayManager.swift in Sources */,
 				1192734B2A0BAA4C006F9A1E /* ArtistManager.swift in Sources */,
+				1192735B2A0C0643006F9A1E /* AlbumHucre.swift in Sources */,
 				1192730C2A0A7150006F9A1E /* ViewController.swift in Sources */,
 				119273472A0ADA6D006F9A1E /* KategoriHucre.swift in Sources */,
 				119273082A0A7150006F9A1E /* AppDelegate.swift in Sources */,
@@ -324,6 +331,7 @@
 				1192734D2A0BABF7006F9A1E /* ArtistModel.swift in Sources */,
 				119273492A0B9CD7006F9A1E /* ArtistViewController.swift in Sources */,
 				119273552A0BEF8E006F9A1E /* ArtistDetayViewController.swift in Sources */,
+				1192735D2A0C0D30006F9A1E /* ArtistModelAlbum.swift in Sources */,
 				119273432A0AD8CE006F9A1E /* KategoriManager.swift in Sources */,
 				1192730A2A0A7150006F9A1E /* SceneDelegate.swift in Sources */,
 				119273572A0BF728006F9A1E /* ArtistModelDetay.swift in Sources */,

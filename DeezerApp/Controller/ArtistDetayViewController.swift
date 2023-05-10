@@ -10,6 +10,7 @@ import UIKit
 class ArtistDetayViewController: UIViewController {
     
     
+    @IBOutlet weak var artistAlbumCollectionView: UITableView!
     @IBOutlet weak var artistKapakImageView: UIImageView!
     var artistId = 0
     
@@ -20,12 +21,22 @@ class ArtistDetayViewController: UIViewController {
             }
         }
     }
+    
+    var myArtistAlbumDetay : [ArtistModelAlbumDetay]? {
+        didSet {
+            DispatchQueue.main.async { [self] in
+                artistAlbumCollectionView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        artistAlbumCollectionView.delegate = self
+        artistAlbumCollectionView.dataSource = self
 
-        
-        
+        self.artistAlbumCollectionView.rowHeight = 80.0
         
         let artistDetayManager = ArtistDetayManager()
         
@@ -69,12 +80,20 @@ class ArtistDetayViewController: UIViewController {
                 }
 
                 downloadPicTask.resume()
-                
-                
-                
+            
                 //--------------
             }
         }
+        
+        artistDetayManager.fetchArtistAlbumDetay { (album) in
+        DispatchQueue.main.async { [self] in
+            //navigationItem.title = "Kategoriler"
+        }
+            self.myArtistAlbumDetay = album.data
+      }
+        
+        
+        
 
         
     }
@@ -82,4 +101,80 @@ class ArtistDetayViewController: UIViewController {
 
     
 
+}
+
+extension ArtistDetayViewController:UITableViewDelegate, UITableViewDataSource{
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myArtistAlbumDetay?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+       
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "albumHucre", for: indexPath) as! AlbumHucre
+        
+        guard let album = myArtistAlbumDetay?[indexPath.row] else { return UITableViewCell() }
+            
+        
+        cell.albumAdLabel.text = album.title
+        cell.albumTarihLabel.text = album.release_date
+        
+        //-----------------
+        let albumPictureURL = URL(string: album.cover_big)!
+
+        let session = URLSession(configuration: .default)
+
+        
+        let downloadPicTask = session.dataTask(with: albumPictureURL) { (data, response, error) in
+            
+            if let e = error {
+                print("Error downloading cat picture: \(e)")
+            } else {
+                
+                if let res = response as? HTTPURLResponse {
+                    
+                    if let imageData = data {
+                        // Finally convert that Data into an image and do what you wish with it.
+                        _ = UIImage(data: imageData)
+                        
+                        DispatchQueue.main.sync {
+                            cell.albumImageView.image = UIImage(data: imageData)
+                        }
+                    } else {
+                        print("Couldn't get image: Image is nil")
+                    }
+                } else {
+                    print("Couldn't get response code for some reason")
+                }
+            }
+        }
+
+        downloadPicTask.resume()
+        
+        //-----------------
+        
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 20
+        
+        return cell
+        
+    }
+    
+   
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("tıklanınca yapılacak işlemler")
+    }
+    
+    
 }

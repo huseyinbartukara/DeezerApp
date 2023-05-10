@@ -238,17 +238,70 @@
                                     <constraint firstAttribute="width" constant="393" id="PbL-7p-RNC"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CQA-dr-vnS">
+                                <rect key="frame" x="0.0" y="350" width="393" height="419"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumHucre" rowHeight="99" id="v3j-Cp-o6G" customClass="AlbumHucre" customModule="DeezerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="99"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v3j-Cp-o6G" id="NYh-Lw-LP7">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zGo-NE-MyU">
+                                                    <rect key="frame" x="20" y="11" width="102" height="77"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="102" id="Zdn-pO-deF"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4k-p6-MxV">
+                                                    <rect key="frame" x="130" y="11" width="51.333333333333343" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcu-rx-mWN">
+                                                    <rect key="frame" x="130" y="45" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zGo-NE-MyU" firstAttribute="top" secondItem="NYh-Lw-LP7" secondAttribute="topMargin" id="4OG-aK-PFp"/>
+                                                <constraint firstItem="zGo-NE-MyU" firstAttribute="leading" secondItem="NYh-Lw-LP7" secondAttribute="leadingMargin" id="7Cl-uh-Yxo"/>
+                                                <constraint firstItem="k4k-p6-MxV" firstAttribute="top" secondItem="NYh-Lw-LP7" secondAttribute="topMargin" id="8M2-AX-22R"/>
+                                                <constraint firstItem="zGo-NE-MyU" firstAttribute="centerY" secondItem="NYh-Lw-LP7" secondAttribute="centerY" id="li1-SC-ngn"/>
+                                                <constraint firstItem="mcu-rx-mWN" firstAttribute="top" secondItem="k4k-p6-MxV" secondAttribute="bottom" constant="10" id="nmA-Gw-lsE"/>
+                                                <constraint firstItem="k4k-p6-MxV" firstAttribute="leading" secondItem="zGo-NE-MyU" secondAttribute="trailing" constant="8" id="wzS-pG-qba"/>
+                                                <constraint firstItem="mcu-rx-mWN" firstAttribute="leading" secondItem="zGo-NE-MyU" secondAttribute="trailing" constant="8" id="xQS-22-GJG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumAdLabel" destination="k4k-p6-MxV" id="ji0-Xy-P1r"/>
+                                            <outlet property="albumImageView" destination="zGo-NE-MyU" id="eYJ-cy-7vy"/>
+                                            <outlet property="albumTarihLabel" destination="mcu-rx-mWN" id="97p-1O-nAk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M49-bf-ZvL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="CQA-dr-vnS" firstAttribute="top" secondItem="byd-kO-bDC" secondAttribute="bottom" id="8nw-sf-TxW"/>
+                            <constraint firstItem="M49-bf-ZvL" firstAttribute="trailing" secondItem="CQA-dr-vnS" secondAttribute="trailing" id="9QV-6z-SAV"/>
                             <constraint firstItem="byd-kO-bDC" firstAttribute="leading" secondItem="M49-bf-ZvL" secondAttribute="leading" id="EwH-LL-elV"/>
                             <constraint firstItem="byd-kO-bDC" firstAttribute="top" secondItem="M49-bf-ZvL" secondAttribute="top" id="JX9-yF-eiB"/>
                             <constraint firstItem="byd-kO-bDC" firstAttribute="trailing" secondItem="M49-bf-ZvL" secondAttribute="trailing" id="N4K-ld-CPt"/>
+                            <constraint firstItem="M49-bf-ZvL" firstAttribute="bottom" secondItem="CQA-dr-vnS" secondAttribute="bottom" id="QAv-4X-vvc"/>
+                            <constraint firstItem="CQA-dr-vnS" firstAttribute="leading" secondItem="M49-bf-ZvL" secondAttribute="leading" id="W4X-F8-uPf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9S4-Uz-43A"/>
                     <connections>
+                        <outlet property="artistAlbumCollectionView" destination="CQA-dr-vnS" id="rx6-Mb-dgz"/>
                         <outlet property="artistKapakImageView" destination="byd-kO-bDC" id="pbY-4D-Zm1"/>
                     </connections>
                 </viewController>

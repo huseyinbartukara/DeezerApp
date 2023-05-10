@@ -23,3 +23,5 @@ struct ArtistModelDetay : Decodable {
     let tracklist : String
     let type : String
 }
+
+

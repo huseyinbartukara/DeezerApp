@@ -44,8 +44,33 @@ struct ArtistDetayManager{
         }
         
         dataTask.resume()
+    }
+    
+    func fetchArtistAlbumDetay ( completion: @escaping(ArtistModelAlbum) -> Void) {
         
+        let olmasıGerekenUrl = "https://api.deezer.com/artist/8354140/albums"
         
+        guard let url = URL(string: "https://api.deezer.com/artist/\(gelenArtistId)/albums") else { return }
+        
+        let dataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
+          if let error = error {
+            print("Error fetching ArtistAlbumDetay: \(error.localizedDescription)")
+          }
+          
+          guard let jsonData = data else { return }
+          
+          let decoder = JSONDecoder()
+          
+          do {
+            let decodedData = try decoder.decode(ArtistModelAlbum.self, from: jsonData)
+            completion(decodedData)
+          } catch {
+            print("Error decoding data.")
+          }
+          
+        }
+        
+        dataTask.resume()
     }
     
     
