@@ -303,16 +303,98 @@
                     <connections>
                         <outlet property="artistAlbumCollectionView" destination="CQA-dr-vnS" id="rx6-Mb-dgz"/>
                         <outlet property="artistKapakImageView" destination="byd-kO-bDC" id="pbY-4D-Zm1"/>
+                        <segue destination="ZjJ-EU-Bl3" kind="show" identifier="toArtistTrackVc" id="9PU-U5-Yll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="few-ZW-wLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3556.4885496183206" y="-180.28169014084509"/>
         </scene>
+        <!--Artist Track View Controller-->
+        <scene sceneID="pzd-ay-sYY">
+            <objects>
+                <viewController id="ZjJ-EU-Bl3" customClass="ArtistTrackViewController" customModule="DeezerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fku-H2-N6B">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nWV-Hs-yKN">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tracksHucre" rowHeight="80" id="Tz2-YA-pAY" customClass="TrakcsHucre" customModule="DeezerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tz2-YA-pAY" id="6Ir-7H-MeH">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8ou-we-9MV">
+                                                    <rect key="frame" x="20" y="21" width="45" height="38.666666666666671"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="12O-uC-iog"/>
+                                                        <constraint firstAttribute="height" constant="40" id="ZFg-2R-LwG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3j-rB-A8b">
+                                                    <rect key="frame" x="73" y="11" width="52" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTL-y1-CG7">
+                                                    <rect key="frame" x="73" y="39" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="p3j-rB-A8b" firstAttribute="top" secondItem="6Ir-7H-MeH" secondAttribute="topMargin" id="1Le-de-BwA"/>
+                                                <constraint firstItem="NTL-y1-CG7" firstAttribute="leading" secondItem="8ou-we-9MV" secondAttribute="trailing" constant="8" id="3MO-Dp-rEp"/>
+                                                <constraint firstItem="8ou-we-9MV" firstAttribute="centerY" secondItem="6Ir-7H-MeH" secondAttribute="centerY" id="Csh-sL-cKW"/>
+                                                <constraint firstItem="8ou-we-9MV" firstAttribute="centerY" secondItem="6Ir-7H-MeH" secondAttribute="centerY" id="EhX-zJ-IEy"/>
+                                                <constraint firstItem="p3j-rB-A8b" firstAttribute="leading" secondItem="8ou-we-9MV" secondAttribute="trailing" constant="8" id="TZ5-8w-5AR"/>
+                                                <constraint firstItem="NTL-y1-CG7" firstAttribute="top" secondItem="p3j-rB-A8b" secondAttribute="bottom" constant="4" id="Xaw-t2-Xvo"/>
+                                                <constraint firstItem="8ou-we-9MV" firstAttribute="leading" secondItem="6Ir-7H-MeH" secondAttribute="leadingMargin" id="ZfO-1I-nkF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tracksAdLabel" destination="p3j-rB-A8b" id="4u8-Kj-nUf"/>
+                                            <outlet property="tracksImageView" destination="8ou-we-9MV" id="b1M-f0-94t"/>
+                                            <outlet property="tracksSureLabel" destination="NTL-y1-CG7" id="113-nw-o2E"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AXH-aQ-y3j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AXH-aQ-y3j" firstAttribute="bottom" secondItem="nWV-Hs-yKN" secondAttribute="bottom" id="C84-Tq-Yyj"/>
+                            <constraint firstItem="nWV-Hs-yKN" firstAttribute="leading" secondItem="AXH-aQ-y3j" secondAttribute="leading" id="CeA-YJ-GG4"/>
+                            <constraint firstItem="AXH-aQ-y3j" firstAttribute="trailing" secondItem="nWV-Hs-yKN" secondAttribute="trailing" id="RLZ-TK-9Wb"/>
+                            <constraint firstItem="nWV-Hs-yKN" firstAttribute="top" secondItem="AXH-aQ-y3j" secondAttribute="top" id="caJ-gF-JHK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eyd-9c-Tzy"/>
+                    <connections>
+                        <outlet property="tracksTableView" destination="nWV-Hs-yKN" id="hLu-Nu-osv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUk-up-4KC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4371.7557251908393" y="-180.28169014084509"/>
+        </scene>
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

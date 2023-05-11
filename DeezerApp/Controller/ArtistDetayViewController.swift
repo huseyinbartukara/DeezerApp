@@ -13,6 +13,7 @@ class ArtistDetayViewController: UIViewController {
     @IBOutlet weak var artistAlbumCollectionView: UITableView!
     @IBOutlet weak var artistKapakImageView: UIImageView!
     var artistId = 0
+    var artistTracksModelManager = ArtistTracksModelManager()
     
     var myArtistDetay: ArtistModelDetay? {
         didSet {
@@ -98,7 +99,15 @@ class ArtistDetayViewController: UIViewController {
         
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        
+       let albumId = sender as? Int
+       let gidilecekVC = segue.destination as! ArtistTrackViewController
+       gidilecekVC.albumId = albumId ?? 0
+       artistTracksModelManager.getAlbumTracksID(albumId: albumId ?? 0)
+    }
     
 
 }
@@ -174,6 +183,10 @@ extension ArtistDetayViewController:UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("tıklanınca yapılacak işlemler")
+        if let album = myArtistAlbumDetay?[indexPath.row]{
+            print(album.id)
+           self.performSegue(withIdentifier: "toArtistTrackVc", sender: album.id)
+        }
     }
     
     
