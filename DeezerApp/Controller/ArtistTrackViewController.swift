@@ -79,6 +79,9 @@ extension ArtistTrackViewController:UITableViewDelegate, UITableViewDataSource{
             cell.tracksSureLabel.text = "\(m):\(s)\""
         }
         
+        cell.ekleButton.tag = indexPath.row
+        cell.ekleButton.addTarget(self, action: #selector(ekleButton), for: .touchUpInside)
+        
         
         
         //-----------------
@@ -92,10 +95,15 @@ extension ArtistTrackViewController:UITableViewDelegate, UITableViewDataSource{
         cell.layer.cornerRadius = 20
         
         return cell
-        
     }
     
-   
+    @objc func ekleButton(){
+        print("button tıklandı")
+        // burada kayıt etme ve silme işlemlerini yapabiliriz.
+            
+        
+        
+    }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -33,6 +33,14 @@
 		11D02E512A0D1B0900246735 /* ArtistTracksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E502A0D1B0900246735 /* ArtistTracksModel.swift */; };
 		11D02E532A0D1C9700246735 /* ArtistTracksModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E522A0D1C9700246735 /* ArtistTracksModelManager.swift */; };
 		11D02E552A0D1FB500246735 /* TrakcsHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E542A0D1FB500246735 /* TrakcsHucre.swift */; };
+		11D02E572A0E54E200246735 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E562A0E54E200246735 /* Tracks.swift */; };
+		11D02E652A0E556A00246735 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E5A2A0E556A00246735 /* FMDatabaseQueue.m */; };
+		11D02E662A0E556A00246735 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E5E2A0E556A00246735 /* FMResultSet.m */; };
+		11D02E672A0E556A00246735 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E5F2A0E556A00246735 /* FMDatabasePool.m */; };
+		11D02E682A0E556A00246735 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E602A0E556A00246735 /* FMDatabase.m */; };
+		11D02E692A0E556A00246735 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E642A0E556A00246735 /* FMDatabaseAdditions.m */; };
+		11D02E6B2A0E55BD00246735 /* trakcs.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 11D02E6A2A0E55BD00246735 /* trakcs.sqlite */; };
+		11D02E6D2A0E55E900246735 /* TracksDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E6C2A0E55E900246735 /* TracksDao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +91,21 @@
 		11D02E502A0D1B0900246735 /* ArtistTracksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTracksModel.swift; sourceTree = "<group>"; };
 		11D02E522A0D1C9700246735 /* ArtistTracksModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTracksModelManager.swift; sourceTree = "<group>"; };
 		11D02E542A0D1FB500246735 /* TrakcsHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrakcsHucre.swift; sourceTree = "<group>"; };
+		11D02E562A0E54E200246735 /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
+		11D02E592A0E556900246735 /* DeezerApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeezerApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		11D02E5A2A0E556A00246735 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		11D02E5B2A0E556A00246735 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		11D02E5C2A0E556A00246735 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		11D02E5D2A0E556A00246735 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		11D02E5E2A0E556A00246735 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		11D02E5F2A0E556A00246735 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		11D02E602A0E556A00246735 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		11D02E612A0E556A00246735 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		11D02E622A0E556A00246735 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		11D02E632A0E556A00246735 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		11D02E642A0E556A00246735 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		11D02E6A2A0E55BD00246735 /* trakcs.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = trakcs.sqlite; sourceTree = "<group>"; };
+		11D02E6C2A0E55E900246735 /* TracksDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksDao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +156,7 @@
 		119273062A0A7150006F9A1E /* DeezerApp */ = {
 			isa = PBXGroup;
 			children = (
+				11D02E582A0E553A00246735 /* Xqlite */,
 				119273072A0A7150006F9A1E /* AppDelegate.swift */,
 				119273092A0A7150006F9A1E /* SceneDelegate.swift */,
 				119273392A0A7775006F9A1E /* Model */,
@@ -198,8 +222,30 @@
 				11D02E502A0D1B0900246735 /* ArtistTracksModel.swift */,
 				11D02E522A0D1C9700246735 /* ArtistTracksModelManager.swift */,
 				11D02E542A0D1FB500246735 /* TrakcsHucre.swift */,
+				11D02E562A0E54E200246735 /* Tracks.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		11D02E582A0E553A00246735 /* Xqlite */ = {
+			isa = PBXGroup;
+			children = (
+				11D02E6A2A0E55BD00246735 /* trakcs.sqlite */,
+				11D02E632A0E556A00246735 /* FMDatabase.h */,
+				11D02E602A0E556A00246735 /* FMDatabase.m */,
+				11D02E612A0E556A00246735 /* FMDatabaseAdditions.h */,
+				11D02E642A0E556A00246735 /* FMDatabaseAdditions.m */,
+				11D02E5B2A0E556A00246735 /* FMDatabasePool.h */,
+				11D02E5F2A0E556A00246735 /* FMDatabasePool.m */,
+				11D02E5C2A0E556A00246735 /* FMDatabaseQueue.h */,
+				11D02E5A2A0E556A00246735 /* FMDatabaseQueue.m */,
+				11D02E5D2A0E556A00246735 /* FMDB.h */,
+				11D02E622A0E556A00246735 /* FMResultSet.h */,
+				11D02E5E2A0E556A00246735 /* FMResultSet.m */,
+				11D02E592A0E556900246735 /* DeezerApp-Bridging-Header.h */,
+				11D02E6C2A0E55E900246735 /* TracksDao.swift */,
+			);
+			path = Xqlite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +316,7 @@
 				TargetAttributes = {
 					119273032A0A7150006F9A1E = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					119273192A0A7151006F9A1E = {
 						CreatedOnToolsVersion = 14.3;
@@ -307,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				119273142A0A7151006F9A1E /* LaunchScreen.storyboard in Resources */,
+				11D02E6B2A0E55BD00246735 /* trakcs.sqlite in Resources */,
 				119273112A0A7151006F9A1E /* Assets.xcassets in Resources */,
 				1192730F2A0A7150006F9A1E /* Main.storyboard in Resources */,
 			);
@@ -339,18 +387,25 @@
 				11D02E552A0D1FB500246735 /* TrakcsHucre.swift in Sources */,
 				11D02E532A0D1C9700246735 /* ArtistTracksModelManager.swift in Sources */,
 				1192730C2A0A7150006F9A1E /* ViewController.swift in Sources */,
+				11D02E572A0E54E200246735 /* Tracks.swift in Sources */,
 				119273472A0ADA6D006F9A1E /* KategoriHucre.swift in Sources */,
 				119273082A0A7150006F9A1E /* AppDelegate.swift in Sources */,
 				119273512A0BB0FE006F9A1E /* ArtistHucre.swift in Sources */,
 				1192734D2A0BABF7006F9A1E /* ArtistModel.swift in Sources */,
 				119273492A0B9CD7006F9A1E /* ArtistViewController.swift in Sources */,
 				119273552A0BEF8E006F9A1E /* ArtistDetayViewController.swift in Sources */,
+				11D02E682A0E556A00246735 /* FMDatabase.m in Sources */,
+				11D02E672A0E556A00246735 /* FMDatabasePool.m in Sources */,
 				11D02E512A0D1B0900246735 /* ArtistTracksModel.swift in Sources */,
 				1192735D2A0C0D30006F9A1E /* ArtistModelAlbum.swift in Sources */,
 				119273432A0AD8CE006F9A1E /* KategoriManager.swift in Sources */,
 				1192730A2A0A7150006F9A1E /* SceneDelegate.swift in Sources */,
+				11D02E662A0E556A00246735 /* FMResultSet.m in Sources */,
+				11D02E6D2A0E55E900246735 /* TracksDao.swift in Sources */,
 				119273572A0BF728006F9A1E /* ArtistModelDetay.swift in Sources */,
+				11D02E692A0E556A00246735 /* FMDatabaseAdditions.m in Sources */,
 				119273532A0BC2F8006F9A1E /* Kategori.swift in Sources */,
+				11D02E652A0E556A00246735 /* FMDatabaseQueue.m in Sources */,
 				11D02E4F2A0D183D00246735 /* ArtistTrackViewController.swift in Sources */,
 				1192733F2A0A7E1D006F9A1E /* KategoriModel.swift in Sources */,
 			);
@@ -527,6 +582,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -544,6 +600,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bartukara.DeezerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DeezerApp/Xqlite/DeezerApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -554,6 +612,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -571,6 +630,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bartukara.DeezerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DeezerApp/Xqlite/DeezerApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

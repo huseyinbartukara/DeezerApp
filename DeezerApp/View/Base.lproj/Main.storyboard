@@ -349,18 +349,29 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fez-r5-bre">
+                                                    <rect key="frame" x="298" y="22.666666666666671" width="75" height="35"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <connections>
+                                                        <action selector="tracksEkleButton:" destination="Tz2-YA-pAY" eventType="touchUpInside" id="ePP-Jg-fAu"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="p3j-rB-A8b" firstAttribute="top" secondItem="6Ir-7H-MeH" secondAttribute="topMargin" id="1Le-de-BwA"/>
                                                 <constraint firstItem="NTL-y1-CG7" firstAttribute="leading" secondItem="8ou-we-9MV" secondAttribute="trailing" constant="8" id="3MO-Dp-rEp"/>
+                                                <constraint firstItem="Fez-r5-bre" firstAttribute="trailing" secondItem="6Ir-7H-MeH" secondAttribute="trailingMargin" id="7Ut-kq-BHQ"/>
                                                 <constraint firstItem="8ou-we-9MV" firstAttribute="centerY" secondItem="6Ir-7H-MeH" secondAttribute="centerY" id="Csh-sL-cKW"/>
                                                 <constraint firstItem="8ou-we-9MV" firstAttribute="centerY" secondItem="6Ir-7H-MeH" secondAttribute="centerY" id="EhX-zJ-IEy"/>
                                                 <constraint firstItem="p3j-rB-A8b" firstAttribute="leading" secondItem="8ou-we-9MV" secondAttribute="trailing" constant="8" id="TZ5-8w-5AR"/>
                                                 <constraint firstItem="NTL-y1-CG7" firstAttribute="top" secondItem="p3j-rB-A8b" secondAttribute="bottom" constant="4" id="Xaw-t2-Xvo"/>
                                                 <constraint firstItem="8ou-we-9MV" firstAttribute="leading" secondItem="6Ir-7H-MeH" secondAttribute="leadingMargin" id="ZfO-1I-nkF"/>
+                                                <constraint firstItem="Fez-r5-bre" firstAttribute="centerY" secondItem="6Ir-7H-MeH" secondAttribute="centerY" id="xCt-4q-kZL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="ekleButton" destination="Fez-r5-bre" id="nbA-PB-EXn"/>
                                             <outlet property="tracksAdLabel" destination="p3j-rB-A8b" id="4u8-Kj-nUf"/>
                                             <outlet property="tracksImageView" destination="8ou-we-9MV" id="b1M-f0-94t"/>
                                             <outlet property="tracksSureLabel" destination="NTL-y1-CG7" id="113-nw-o2E"/>

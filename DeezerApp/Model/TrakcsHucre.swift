@@ -13,6 +13,7 @@ class TrakcsHucre: UITableViewCell {
     @IBOutlet weak var tracksImageView: UIImageView!
     @IBOutlet weak var tracksAdLabel: UILabel!
     @IBOutlet weak var tracksSureLabel: UILabel!
+    @IBOutlet weak var ekleButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +25,11 @@ class TrakcsHucre: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
+    @IBAction func tracksEkleButton(_ sender: UIButton) {
+        
+    }
+    
 
 }
