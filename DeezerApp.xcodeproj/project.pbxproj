@@ -39,8 +39,11 @@
 		11D02E672A0E556A00246735 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E5F2A0E556A00246735 /* FMDatabasePool.m */; };
 		11D02E682A0E556A00246735 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E602A0E556A00246735 /* FMDatabase.m */; };
 		11D02E692A0E556A00246735 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E642A0E556A00246735 /* FMDatabaseAdditions.m */; };
-		11D02E6B2A0E55BD00246735 /* trakcs.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 11D02E6A2A0E55BD00246735 /* trakcs.sqlite */; };
 		11D02E6D2A0E55E900246735 /* TracksDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E6C2A0E55E900246735 /* TracksDao.swift */; };
+		11D02E6F2A0E6CCA00246735 /* FavoriteTracksHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E6E2A0E6CCA00246735 /* FavoriteTracksHucre.swift */; };
+		11D02E712A0E6E4200246735 /* FavoriteTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E702A0E6E4200246735 /* FavoriteTracksViewController.swift */; };
+		11D02E742A0E736D00246735 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D02E732A0E736700246735 /* libsqlite3.tbd */; };
+		11D02E762A0E748A00246735 /* trakcs.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 11D02E752A0E748A00246735 /* trakcs.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,8 +107,11 @@
 		11D02E622A0E556A00246735 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		11D02E632A0E556A00246735 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		11D02E642A0E556A00246735 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		11D02E6A2A0E55BD00246735 /* trakcs.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = trakcs.sqlite; sourceTree = "<group>"; };
 		11D02E6C2A0E55E900246735 /* TracksDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksDao.swift; sourceTree = "<group>"; };
+		11D02E6E2A0E6CCA00246735 /* FavoriteTracksHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTracksHucre.swift; sourceTree = "<group>"; };
+		11D02E702A0E6E4200246735 /* FavoriteTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTracksViewController.swift; sourceTree = "<group>"; };
+		11D02E732A0E736700246735 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		11D02E752A0E748A00246735 /* trakcs.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = trakcs.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D02E742A0E736D00246735 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +147,7 @@
 				1192731D2A0A7151006F9A1E /* DeezerAppTests */,
 				119273272A0A7151006F9A1E /* DeezerAppUITests */,
 				119273052A0A7150006F9A1E /* Products */,
+				11D02E722A0E736700246735 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +201,7 @@
 				119273482A0B9CD7006F9A1E /* ArtistViewController.swift */,
 				119273542A0BEF8E006F9A1E /* ArtistDetayViewController.swift */,
 				11D02E4E2A0D183D00246735 /* ArtistTrackViewController.swift */,
+				11D02E702A0E6E4200246735 /* FavoriteTracksViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 				11D02E522A0D1C9700246735 /* ArtistTracksModelManager.swift */,
 				11D02E542A0D1FB500246735 /* TrakcsHucre.swift */,
 				11D02E562A0E54E200246735 /* Tracks.swift */,
+				11D02E6E2A0E6CCA00246735 /* FavoriteTracksHucre.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,7 +240,7 @@
 		11D02E582A0E553A00246735 /* Xqlite */ = {
 			isa = PBXGroup;
 			children = (
-				11D02E6A2A0E55BD00246735 /* trakcs.sqlite */,
+				11D02E752A0E748A00246735 /* trakcs.sqlite */,
 				11D02E632A0E556A00246735 /* FMDatabase.h */,
 				11D02E602A0E556A00246735 /* FMDatabase.m */,
 				11D02E612A0E556A00246735 /* FMDatabaseAdditions.h */,
@@ -246,6 +256,14 @@
 				11D02E6C2A0E55E900246735 /* TracksDao.swift */,
 			);
 			path = Xqlite;
+			sourceTree = "<group>";
+		};
+		11D02E722A0E736700246735 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11D02E732A0E736700246735 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,7 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				119273142A0A7151006F9A1E /* LaunchScreen.storyboard in Resources */,
-				11D02E6B2A0E55BD00246735 /* trakcs.sqlite in Resources */,
+				11D02E762A0E748A00246735 /* trakcs.sqlite in Resources */,
 				119273112A0A7151006F9A1E /* Assets.xcassets in Resources */,
 				1192730F2A0A7150006F9A1E /* Main.storyboard in Resources */,
 			);
@@ -385,6 +403,7 @@
 				1192734B2A0BAA4C006F9A1E /* ArtistManager.swift in Sources */,
 				1192735B2A0C0643006F9A1E /* AlbumHucre.swift in Sources */,
 				11D02E552A0D1FB500246735 /* TrakcsHucre.swift in Sources */,
+				11D02E712A0E6E4200246735 /* FavoriteTracksViewController.swift in Sources */,
 				11D02E532A0D1C9700246735 /* ArtistTracksModelManager.swift in Sources */,
 				1192730C2A0A7150006F9A1E /* ViewController.swift in Sources */,
 				11D02E572A0E54E200246735 /* Tracks.swift in Sources */,
@@ -392,6 +411,7 @@
 				119273082A0A7150006F9A1E /* AppDelegate.swift in Sources */,
 				119273512A0BB0FE006F9A1E /* ArtistHucre.swift in Sources */,
 				1192734D2A0BABF7006F9A1E /* ArtistModel.swift in Sources */,
+				11D02E6F2A0E6CCA00246735 /* FavoriteTracksHucre.swift in Sources */,
 				119273492A0B9CD7006F9A1E /* ArtistViewController.swift in Sources */,
 				119273552A0BEF8E006F9A1E /* ArtistDetayViewController.swift in Sources */,
 				11D02E682A0E556A00246735 /* FMDatabase.m in Sources */,

@@ -28,6 +28,8 @@ class ViewController: UIViewController {
       override func viewDidLoad() {
         super.viewDidLoad()
           
+          veritabaniKopyala()
+          
           kategoriCollectionView.delegate = self
           kategoriCollectionView.dataSource = self
           
@@ -69,6 +71,31 @@ class ViewController: UIViewController {
         
     }
     
+    func veritabaniKopyala(){
+        
+        let bundleYolu = Bundle.main.path(forResource: "trakcs", ofType: ".sqlite")
+        
+        let hedefyol = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        
+        let fileManager = FileManager.default
+        
+        let kopyalanacakYer = URL(fileURLWithPath: hedefyol).appendingPathComponent("trakcs.sqlite")
+        
+        if fileManager.fileExists(atPath: kopyalanacakYer.path){
+           
+            print("Veri tabanı zaten var kopyalamaya gerek yok")
+            
+        }else{
+            do {
+                
+                try fileManager.copyItem(atPath: bundleYolu!, toPath: kopyalanacakYer.path)
+                
+            }catch{
+                print(error)
+            }
+        }
+        
+    }
 
     
     

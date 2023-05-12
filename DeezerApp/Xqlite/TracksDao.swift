@@ -14,7 +14,7 @@ class TracksDao {
     init() {
         let hedefYol = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         
-        let veritabaniURL = URL(fileURLWithPath: hedefYol).appendingPathComponent("tracks.sqlite")
+        let veritabaniURL = URL(fileURLWithPath: hedefYol).appendingPathComponent("trakcs.sqlite")
         
         db = FMDatabase(path: veritabaniURL.path)
     }
@@ -46,7 +46,7 @@ class TracksDao {
         db?.open()
         
         do {
-            try db?.executeUpdate("INSERT INTO tracks (albumId, albumDuration) VALUES (?,?)", values: [albumTitle,albumDuration])
+            try db?.executeUpdate("INSERT INTO tracks (albumTitle, albumDuration) VALUES (?,?)", values: [albumTitle,albumDuration])
         } catch {
             print(error.localizedDescription)
         }
@@ -57,7 +57,7 @@ class TracksDao {
     func tracksSil(albumId : Int){
         db?.open()
         do {
-            try db?.executeUpdate("DELETE FROM trakcs WHERE albumId = ?", values: [albumId])
+            try db?.executeUpdate("DELETE FROM tracks WHERE albumId = ?", values: [albumId])
         } catch {
             print(error.localizedDescription)
         }

@@ -15,6 +15,7 @@ class TrakcsHucre: UITableViewCell {
     @IBOutlet weak var tracksSureLabel: UILabel!
     @IBOutlet weak var ekleButton: UIButton!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

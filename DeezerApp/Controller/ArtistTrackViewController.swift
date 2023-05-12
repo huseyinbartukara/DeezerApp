@@ -11,6 +11,8 @@ import AVFoundation
 class ArtistTrackViewController: UIViewController {
     
     @IBOutlet weak var tracksTableView: UITableView!
+    
+    
     var albumId = 0
     var player: AVPlayer!
     var myArtistTracks : [ArtistTracks]? {
@@ -69,6 +71,8 @@ extension ArtistTrackViewController:UITableViewDelegate, UITableViewDataSource{
         
         guard let tracks = myArtistTracks?[indexPath.row] else { return UITableViewCell() }
             
+        
+        
         cell.tracksAdLabel.text = tracks.title
         
         let (h,m,s) = secondsToHourMinutesSeconds(tracks.duration)
@@ -81,6 +85,8 @@ extension ArtistTrackViewController:UITableViewDelegate, UITableViewDataSource{
         
         cell.ekleButton.tag = indexPath.row
         cell.ekleButton.addTarget(self, action: #selector(ekleButton), for: .touchUpInside)
+        
+        
         
         
         
@@ -97,17 +103,25 @@ extension ArtistTrackViewController:UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    @objc func ekleButton(){
-        print("button tıklandı")
-        // burada kayıt etme ve silme işlemlerini yapabiliriz.
-            
+    @objc func ekleButton(sender:UIButton){
+        print(" ekle button tıklandı")
+        
+        let indexpath = IndexPath(row: sender.tag,section: 0)
+        print(indexpath.row)
+        
+        let tracks = myArtistTracks?[indexpath.row]
+        
+        TracksDao().tracksEkle(albumTitle: tracks?.title ?? "", albumDuration: tracks?.duration ?? 0)
         
         
     }
     
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("tıklanınca yapılacak işlemler")
+        
         
         if let tracks = myArtistTracks?[indexPath.row]{
             let url = URL(string: tracks.preview)
@@ -125,9 +139,8 @@ extension ArtistTrackViewController:UITableViewDelegate, UITableViewDataSource{
             }
             
         }
-        
-        
     }
+    
     
     
 }
