@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FavoriteTracksViewController: UIViewController {
 
     @IBOutlet weak var favoriteTracksTableView: UITableView!
     
+    var player: AVPlayer!
     var tracksListe = [Tracks]()
     var myArtistTracks : [ArtistTracks]? {
         didSet {
@@ -129,8 +131,8 @@ extension FavoriteTracksViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Şarkı Çaldırma yeri Burası.")
         
-        /*if let track = tracksListe[indexPath.row]{
-            let url = URL(string: track.)
+            let tracks = tracksListe[indexPath.row]
+            let url = URL(string: tracks.albumPreview!)
             
             do {
                 let playerItem = AVPlayerItem(url: url!)
@@ -144,7 +146,7 @@ extension FavoriteTracksViewController: UITableViewDelegate, UITableViewDataSour
                 print("AVAudioPlayer init failed")
             }
             
-        } */
+        
         
         
         

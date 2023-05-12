@@ -30,7 +30,8 @@ class TracksDao {
             while rs.next(){
                 let track = Tracks(albumId: Int(rs.string(forColumn: "albumId"))!
                                    ,albumTitle: rs.string(forColumn: "albumTitle")!
-                                   ,albumDuration: Int(rs.string(forColumn: "albumDuration"))!)
+                                   ,albumDuration: Int(rs.string(forColumn: "albumDuration"))!
+                                   ,albumPreview: rs.string(forColumn: "albumPreview")!)
                 
                 liste.append(track)
             }
@@ -41,12 +42,12 @@ class TracksDao {
         return liste
     }
     
-    func tracksEkle (albumTitle:String, albumDuration:Int){
+    func tracksEkle (albumTitle:String, albumDuration:Int, albumPreview:String){
         
         db?.open()
         
         do {
-            try db?.executeUpdate("INSERT INTO tracks (albumTitle, albumDuration) VALUES (?,?)", values: [albumTitle,albumDuration])
+            try db?.executeUpdate("INSERT INTO tracks (albumTitle, albumDuration, albumPreview) VALUES (?,?,?)", values: [albumTitle,albumDuration, albumPreview])
         } catch {
             print(error.localizedDescription)
         }

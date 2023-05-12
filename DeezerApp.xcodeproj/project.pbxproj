@@ -43,7 +43,7 @@
 		11D02E6F2A0E6CCA00246735 /* FavoriteTracksHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E6E2A0E6CCA00246735 /* FavoriteTracksHucre.swift */; };
 		11D02E712A0E6E4200246735 /* FavoriteTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02E702A0E6E4200246735 /* FavoriteTracksViewController.swift */; };
 		11D02E742A0E736D00246735 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D02E732A0E736700246735 /* libsqlite3.tbd */; };
-		11D02E762A0E748A00246735 /* trakcs.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 11D02E752A0E748A00246735 /* trakcs.sqlite */; };
+		11D02E782A0E8DAE00246735 /* trakcs.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 11D02E772A0E8DAE00246735 /* trakcs.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +111,7 @@
 		11D02E6E2A0E6CCA00246735 /* FavoriteTracksHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTracksHucre.swift; sourceTree = "<group>"; };
 		11D02E702A0E6E4200246735 /* FavoriteTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTracksViewController.swift; sourceTree = "<group>"; };
 		11D02E732A0E736700246735 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		11D02E752A0E748A00246735 /* trakcs.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = trakcs.sqlite; sourceTree = "<group>"; };
+		11D02E772A0E8DAE00246735 /* trakcs.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = trakcs.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,7 +240,7 @@
 		11D02E582A0E553A00246735 /* Xqlite */ = {
 			isa = PBXGroup;
 			children = (
-				11D02E752A0E748A00246735 /* trakcs.sqlite */,
+				11D02E772A0E8DAE00246735 /* trakcs.sqlite */,
 				11D02E632A0E556A00246735 /* FMDatabase.h */,
 				11D02E602A0E556A00246735 /* FMDatabase.m */,
 				11D02E612A0E556A00246735 /* FMDatabaseAdditions.h */,
@@ -372,7 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				119273142A0A7151006F9A1E /* LaunchScreen.storyboard in Resources */,
-				11D02E762A0E748A00246735 /* trakcs.sqlite in Resources */,
+				11D02E782A0E8DAE00246735 /* trakcs.sqlite in Resources */,
 				119273112A0A7151006F9A1E /* Assets.xcassets in Resources */,
 				1192730F2A0A7150006F9A1E /* Main.storyboard in Resources */,
 			);

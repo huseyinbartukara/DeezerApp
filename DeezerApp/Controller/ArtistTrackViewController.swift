@@ -111,7 +111,7 @@ extension ArtistTrackViewController:UITableViewDelegate, UITableViewDataSource{
         
         let tracks = myArtistTracks?[indexpath.row]
         
-        TracksDao().tracksEkle(albumTitle: tracks?.title ?? "", albumDuration: tracks?.duration ?? 0)
+        TracksDao().tracksEkle(albumTitle: tracks?.title ?? "", albumDuration: tracks?.duration ?? 0, albumPreview: tracks?.preview ?? "")
         
         
     }
