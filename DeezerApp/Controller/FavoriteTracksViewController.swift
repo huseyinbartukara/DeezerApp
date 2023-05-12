@@ -69,6 +69,9 @@ class FavoriteTracksViewController: UIViewController {
         
     }
 
+    func secondsToHourMinutesSeconds(_ seconds: Int) -> (Int, Int, Int) {
+        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
     
 }
 
@@ -89,7 +92,16 @@ extension FavoriteTracksViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteTracksHucre", for: indexPath) as! FavoriteTracksHucre
         
         cell.albumAdLabel.text = track.albumTitle
-        cell.albumSureLabel.text = "\(track.albumDuration)"
+        
+        let (h,m,s) = secondsToHourMinutesSeconds(track.albumDuration!)
+        
+        if s < 10 {
+            cell.albumSureLabel.text = "\(m):0\(s)\""
+        }else{
+            cell.albumSureLabel.text = "\(m):\(s)\""
+        }
+        
+        
         
         cell.silButton.tag = indexPath.row
         cell.silButton.addTarget(self, action: #selector(silButton), for: .touchUpInside)
@@ -116,6 +128,26 @@ extension FavoriteTracksViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Şarkı Çaldırma yeri Burası.")
+        
+        /*if let track = tracksListe[indexPath.row]{
+            let url = URL(string: track.)
+            
+            do {
+                let playerItem = AVPlayerItem(url: url!)
+                self.player = try AVPlayer(playerItem: playerItem)
+                player.volume = 1.0
+                player!.play()
+            }catch let error as NSError {
+                self.player = nil
+                print(error.localizedDescription)
+            } catch {
+                print("AVAudioPlayer init failed")
+            }
+            
+        } */
+        
+        
+        
     }
     
     
