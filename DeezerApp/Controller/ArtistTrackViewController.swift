@@ -15,6 +15,7 @@ class ArtistTrackViewController: UIViewController {
     
     var albumId = 0
     var player: AVPlayer!
+    var tracksListe = [Tracks]()
     var myArtistTracks : [ArtistTracks]? {
         didSet {
             DispatchQueue.main.async { [self] in
@@ -27,11 +28,14 @@ class ArtistTrackViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tracksListe = TracksDao().tumTracksAl()
 
         tracksTableView.delegate = self
         tracksTableView.dataSource = self
         
         self.tracksTableView.rowHeight = 80.0
+        
         
         let artistTracksModelManager = ArtistTracksModelManager()
         
@@ -86,9 +90,19 @@ extension ArtistTrackViewController:UITableViewDelegate, UITableViewDataSource{
         cell.ekleButton.tag = indexPath.row
         cell.ekleButton.addTarget(self, action: #selector(ekleButton), for: .touchUpInside)
         
+        cell.ekleButton.setTitle("", for: .normal)
+        let kalpImage = UIImage(named: "kalp")
+        cell.ekleButton.setImage(kalpImage?.withRenderingMode(.automatic),for: .normal)
+        cell.ekleButton.imageView?.layer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1)
         
-        
-        
+        for track in tracksListe{
+            if tracks.title == track.albumTitle{
+                cell.ekleButton.setTitle("", for: .normal)
+                let kalpImage = UIImage(named: "doluKalp")
+                cell.ekleButton.setImage(kalpImage?.withRenderingMode(.automatic),for: .normal)
+                cell.ekleButton.imageView?.layer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1)
+            }
+        }
         
         //-----------------
         
@@ -100,8 +114,11 @@ extension ArtistTrackViewController:UITableViewDelegate, UITableViewDataSource{
         cell.layer.borderWidth = 0.5
         cell.layer.cornerRadius = 20
         
+        
         return cell
     }
+    
+    
     
     @objc func ekleButton(sender:UIButton){
         print(" ekle button tıklandı")
@@ -109,10 +126,17 @@ extension ArtistTrackViewController:UITableViewDelegate, UITableViewDataSource{
         let indexpath = IndexPath(row: sender.tag,section: 0)
         print(indexpath.row)
         
-        let tracks = myArtistTracks?[indexpath.row]
+        
+        var tracks = myArtistTracks?[indexpath.row]
+        
+        
         
         TracksDao().tracksEkle(albumTitle: tracks?.title ?? "", albumDuration: tracks?.duration ?? 0, albumPreview: tracks?.preview ?? "")
         
+        sender.setTitle("", for: .normal)
+        let kalpImage = UIImage(named: "doluKalp")
+        sender.setImage(kalpImage?.withRenderingMode(.automatic),for: .normal)
+        sender.imageView?.layer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1)
         
     }
     

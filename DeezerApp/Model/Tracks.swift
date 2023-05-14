@@ -14,6 +14,7 @@ class Tracks {
     var albumDuration : Int?
     var albumPreview : String?
     
+    
     init() {
         
     }

@@ -108,6 +108,11 @@ extension FavoriteTracksViewController: UITableViewDelegate, UITableViewDataSour
         cell.silButton.tag = indexPath.row
         cell.silButton.addTarget(self, action: #selector(silButton), for: .touchUpInside)
         
+        cell.silButton.setTitle("", for: .normal)
+        let kalpImage = UIImage(named: "doluKalp")
+        cell.silButton.setImage(kalpImage?.withRenderingMode(.automatic),for: .normal)
+        cell.silButton.imageView?.layer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1)
+        
                 
         return cell
         

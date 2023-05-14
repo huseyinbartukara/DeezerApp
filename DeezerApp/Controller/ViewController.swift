@@ -44,7 +44,7 @@ class ViewController: UIViewController {
           
           let hucreGenislik = (genislik-30) / 2
           
-          tasarim.itemSize = CGSize(width: (hucreGenislik), height: hucreGenislik*1.65)
+          tasarim.itemSize = CGSize(width: (hucreGenislik), height: hucreGenislik*1.25)
           
           kategoriCollectionView!.collectionViewLayout = tasarim
         

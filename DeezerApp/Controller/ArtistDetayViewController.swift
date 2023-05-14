@@ -39,6 +39,8 @@ class ArtistDetayViewController: UIViewController {
 
         self.artistAlbumCollectionView.rowHeight = 80.0
         
+
+        
         let artistDetayManager = ArtistDetayManager()
         
         artistDetayManager.fetchArtistDetay { (artistDetay) in
@@ -174,6 +176,7 @@ extension ArtistDetayViewController:UITableViewDelegate, UITableViewDataSource{
         cell.layer.borderWidth = 0.5
         cell.layer.cornerRadius = 20
         
+        
         return cell
         
     }
@@ -188,6 +191,8 @@ extension ArtistDetayViewController:UITableViewDelegate, UITableViewDataSource{
            self.performSegue(withIdentifier: "toArtistTrackVc", sender: album.id)
         }
     }
+    
+    
     
     
 }

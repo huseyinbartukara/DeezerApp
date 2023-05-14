@@ -35,14 +35,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQ4-4c-A3d">
-                                                    <rect key="frame" x="8" y="62" width="185" height="189"/>
+                                                    <rect key="frame" x="8" y="88" width="185" height="189"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="185" id="YTr-Sk-O0W"/>
                                                         <constraint firstAttribute="height" constant="189" id="vVc-cd-Ahl"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgW-Cx-aNt">
-                                                    <rect key="frame" x="79.666666666666671" y="276" width="42" height="21"/>
+                                                    <rect key="frame" x="79.666666666666671" y="285" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -50,8 +50,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="SQ4-4c-A3d" firstAttribute="centerX" secondItem="foq-Zc-Rtf" secondAttribute="centerX" id="7Od-51-o96"/>
-                                                <constraint firstAttribute="bottom" secondItem="PgW-Cx-aNt" secondAttribute="bottom" constant="25" id="Ju9-uv-hf8"/>
-                                                <constraint firstItem="PgW-Cx-aNt" firstAttribute="top" secondItem="SQ4-4c-A3d" secondAttribute="bottom" constant="25" id="nEH-hY-kmN"/>
+                                                <constraint firstAttribute="bottom" secondItem="PgW-Cx-aNt" secondAttribute="bottom" constant="16" id="Ju9-uv-hf8"/>
+                                                <constraint firstItem="PgW-Cx-aNt" firstAttribute="top" secondItem="SQ4-4c-A3d" secondAttribute="bottom" constant="8" id="nEH-hY-kmN"/>
                                                 <constraint firstItem="PgW-Cx-aNt" firstAttribute="centerX" secondItem="foq-Zc-Rtf" secondAttribute="centerX" id="w0I-n6-i8N"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -237,23 +237,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6qt-3y-fHB">
-                                                    <rect key="frame" x="8" y="62" width="185" height="189"/>
+                                                    <rect key="frame" x="8" y="88" width="185" height="189"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="189" id="YeZ-f1-ogR"/>
                                                         <constraint firstAttribute="width" constant="185" id="epW-C7-0sT"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeJ-qO-jWC">
-                                                    <rect key="frame" x="79.666666666666671" y="276" width="42" height="21"/>
+                                                    <rect key="frame" x="79.666666666666671" y="285" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="CeJ-qO-jWC" firstAttribute="top" secondItem="6qt-3y-fHB" secondAttribute="bottom" constant="25" id="4BS-kq-Kjw"/>
+                                                <constraint firstItem="CeJ-qO-jWC" firstAttribute="top" secondItem="6qt-3y-fHB" secondAttribute="bottom" constant="8" id="4BS-kq-Kjw"/>
                                                 <constraint firstItem="CeJ-qO-jWC" firstAttribute="centerX" secondItem="hsh-UX-pQn" secondAttribute="centerX" id="DhY-W8-iAp"/>
-                                                <constraint firstAttribute="bottom" secondItem="CeJ-qO-jWC" secondAttribute="bottom" constant="25" id="r2d-dK-pSg"/>
+                                                <constraint firstAttribute="bottom" secondItem="CeJ-qO-jWC" secondAttribute="bottom" constant="16" id="r2d-dK-pSg"/>
                                                 <constraint firstItem="6qt-3y-fHB" firstAttribute="centerX" secondItem="CeJ-qO-jWC" secondAttribute="centerX" id="ryd-FO-GKT"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -301,7 +301,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CQA-dr-vnS">
-                                <rect key="frame" x="0.0" y="350" width="393" height="419"/>
+                                <rect key="frame" x="0.0" y="355" width="393" height="414"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumHucre" rowHeight="99" id="v3j-Cp-o6G" customClass="AlbumHucre" customModule="DeezerApp" customModuleProvider="target">
@@ -352,7 +352,7 @@
                         <viewLayoutGuide key="safeArea" id="M49-bf-ZvL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CQA-dr-vnS" firstAttribute="top" secondItem="byd-kO-bDC" secondAttribute="bottom" id="8nw-sf-TxW"/>
+                            <constraint firstItem="CQA-dr-vnS" firstAttribute="top" secondItem="byd-kO-bDC" secondAttribute="bottom" constant="5" id="8nw-sf-TxW"/>
                             <constraint firstItem="M49-bf-ZvL" firstAttribute="trailing" secondItem="CQA-dr-vnS" secondAttribute="trailing" id="9QV-6z-SAV"/>
                             <constraint firstItem="byd-kO-bDC" firstAttribute="leading" secondItem="M49-bf-ZvL" secondAttribute="leading" id="EwH-LL-elV"/>
                             <constraint firstItem="byd-kO-bDC" firstAttribute="top" secondItem="M49-bf-ZvL" secondAttribute="top" id="JX9-yF-eiB"/>
@@ -412,14 +412,15 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fez-r5-bre">
-                                                    <rect key="frame" x="339" y="25" width="50" height="30"/>
+                                                    <rect key="frame" x="333" y="25" width="50" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="CVw-JT-Zz1"/>
                                                         <constraint firstAttribute="height" constant="30" id="gFT-ET-EnU"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Ekle">
+                                                    <buttonConfiguration key="configuration" style="plain" image="kalp" title="Ekle" imagePadding="0.0">
                                                         <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                                        <color key="baseForegroundColor" systemColor="labelColor"/>
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="tracksEkleButton:" destination="Tz2-YA-pAY" eventType="touchUpInside" id="ePP-Jg-fAu"/>
@@ -434,7 +435,7 @@
                                                 <constraint firstItem="p3j-rB-A8b" firstAttribute="leading" secondItem="8ou-we-9MV" secondAttribute="trailing" constant="8" id="TZ5-8w-5AR"/>
                                                 <constraint firstItem="NTL-y1-CG7" firstAttribute="top" secondItem="p3j-rB-A8b" secondAttribute="bottom" constant="4" id="Xaw-t2-Xvo"/>
                                                 <constraint firstItem="8ou-we-9MV" firstAttribute="leading" secondItem="6Ir-7H-MeH" secondAttribute="leadingMargin" id="ZfO-1I-nkF"/>
-                                                <constraint firstAttribute="trailing" secondItem="Fez-r5-bre" secondAttribute="trailing" constant="4" id="lWd-lN-n6j"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fez-r5-bre" secondAttribute="trailing" constant="10" id="lWd-lN-n6j"/>
                                                 <constraint firstItem="Fez-r5-bre" firstAttribute="centerY" secondItem="6Ir-7H-MeH" secondAttribute="centerY" id="vmN-f0-Iph"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -469,6 +470,7 @@
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="kalp" width="170.66667175292969" height="170.66667175292969"/>
         <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
         <systemColor name="labelColor">

@@ -32,6 +32,7 @@ struct ArtistTracks : Decodable {
     let md5_image : String
     let artist : ArtistNesne
     let type : String
+    
 }
 
 struct ArtistNesne : Decodable {
